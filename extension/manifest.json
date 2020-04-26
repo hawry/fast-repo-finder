@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Fast Repository Finder",
-  "description": "WebExtension for Chrome & Firefox to quickly allow you to query popular software package sites for libraries & dependencies without going through google or their respective user interfaces",
-  "version": "0.1.0",
+  "description": "Quickly query software package sites for libraries & dependencies such as NPM, PyPi and Maven Central directly from your browser",
+  "version": "0.2.2",
   "permissions": ["storage"],
   "icons": {
     "16": "images/16x16.png",

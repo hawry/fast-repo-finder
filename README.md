@@ -4,17 +4,12 @@ WebExtension for Chrome & Firefox to quickly allow you to query popular software
 
 ## Todo
 
-Add support for:
+- store last used repository and show that as the default one when popup opens
 
-- [] Maven Central Repository
-- [] PyPi
-- [] npm
+## Contributions & Attributions
 
+<div>Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> (Settings gear)
 
-### Developer Notes
+<div>Icons made by <a href="https://www.flaticon.com/authors/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> (Cloud icon)
 
-`https://mvnrepository.com/search?q=<searchterm>`
-
-`https://pypi.org/search/?q=<searchterm>`
-
-`https://www.npmjs.com/search?q=<searchterm>`
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> (Spyglass)

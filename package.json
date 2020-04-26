@@ -7,7 +7,7 @@
         "test": "karma start",
         "test:debug": "karma start --no-single-run --auto-watch",
         "test:headless": "karma start --browsers FirefoxHeadless,ChromeHeadless",
-        "web-ext": "web-text run -s ./extension --keep-profile-changes",
+        "web-ext": "web-ext run -s ./extension --keep-profile-changes",
         "build": "web-ext build -s ./extension --ignore-files=raw/ web-ext-artifactes/"
     },
     "repository": "git@github.com:hawry/fast-repo-finder",

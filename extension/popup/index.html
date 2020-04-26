@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fast Repository Finder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input type="hidden" name="query-target" id="query-target" value="" />
+    <div id="frf-tabs">
+      <div
+        class="tab-item"
+        data-query="https://mvnrepository.com/search?q=<frfterm>"
+      >
+        Maven Central
+      </div>
+      <div class="tab-item" data-query="https://pypi.org/search/?q=<frfterm>">
+        PyPi
+      </div>
+      <div
+        class="tab-item"
+        data-query="https://www.npmjs.com/search?q=<frfterm>"
+      >
+        NPM JS
+      </div>
+    </div>
+    <div id="frf-search-form-wrapper">
+      <form id="frf-search-form">
+        <div id="frf-search-bar">
+          <input
+            type="text"
+            name="frf-query-param"
+            id="frf-query-param"
+            placeholder="Library name"
+          />
+        </div>
+        <div id="frf-search-button">
+          <button>Find</button>
+        </div>
+      </form>
+    </div>
+    <div id="frf-configuration-icon">
+      <img src="/raw/gear.svg" />
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Fast Repository Finder",
   "description": "Quickly query software package sites for libraries & dependencies such as NPM, PyPi and Maven Central directly from your browser",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "permissions": ["storage"],
   "icons": {
     "16": "images/16x16.png",
@@ -19,6 +19,10 @@
     },
     "default_title": "Fast Repository Finder",
     "default_popup": "popup/index.html"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": true
   },
   "browser_specific_settings": {
     "gecko": {

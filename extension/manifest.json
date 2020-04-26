@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Fast Repository Finder",
+    "description": "WebExtension for Chrome & Firefox to quickly allow you to query popular software package sites for libraries & dependencies without going through google or their respective user interfaces",
+    "version": "0.1.0",
+    "permissions": [
+        "storage"
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{c8fdbcaa-87c2-11ea-b978-2b4189abc913}"
+        }
+    }
+}

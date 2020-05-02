@@ -6,8 +6,8 @@ findRepo = e => {
   e.preventDefault()
   let target = targetQuery.value
   let query = queryInput.value
-  let url = target.replace("<frfterm>", query)
 
+  let url = target.replace("<frfterm>", query)
   storeLastQuery(target, query)
 
   browser.tabs.create({

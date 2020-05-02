@@ -22,6 +22,8 @@ body > * {
   font-variant: small-caps;
   font-size: 0.8rem;
   user-select: none;
+  min-width: 4rem;
+  text-align: center;
 }
 
 .tab-item.selected {
@@ -42,6 +44,10 @@ button {
 
 #frf-search-form > * {
   padding: 0.2rem;
+}
+
+input {
+  width: 100%;
 }
 
 #frf-search-button {

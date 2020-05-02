@@ -34,6 +34,7 @@ changeActiveRepo = e => {
   toggleSelectedClassName(tabItems, queryAttribute)
   if (queryAttribute != null) {
     targetQuery.value = queryAttribute
+    queryInput.focus()
   } else {
     console.error("query attribute has invalid or missing value")
   }

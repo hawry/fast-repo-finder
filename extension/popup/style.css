@@ -63,3 +63,16 @@ input {
 #frf-configuration-icon img {
   width: 1rem;
 }
+
+#frf-options-bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#frf-options-bar-image {
+  width: 1rem;
+}
+
+#frf-options-bar-image:hover {
+  cursor: pointer;
+}

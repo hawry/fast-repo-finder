@@ -2,54 +2,93 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <script
+      type="application/javascript"
+      src="/vendor/browser-polyfill.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div>
-      Quickly query software package sites for libraries & dependencies such as
-      NPM, PyPi, RubyGems, and Maven Central directly from your browser.
+      <h2>Configuration</h2>
+      <form id="frf-options-configuration">
+        <textarea
+          class="frf-configuration-textbox"
+          id="frf-configuration-textbox"
+        ></textarea>
+        <button>Save</button>
+      </form>
+
+      <h3>Syntax</h3>
+      The configuration consist of a JSON array on the following format:
+      <pre>
+  [ 
+    { 
+      "name": "string",
+      "address": "string" 
+    }
+  ]
+      </pre>
+      Where the attribute <code>name</code> is the text shown above the input
+      field, and <code>address</code> is the target to open, with the query
+      field marked as <code>&lt;frfterm&gt;</code>. The extension will do a
+      simple replace of the <code>&lt;frfterm&gt;</code> keyword for whatever
+      you put into the search field.
+
+      <h4>Example</h4>
+      <pre>
+  {
+    "name": "PyPi",
+    "address": "https://pypi.org/search/?q=&lt;frfterm&gt;"
+  }
+      </pre>
     </div>
+    <hr />
     <div>
-      <h3>Attributions</h3>
+      <small>
+        <h3>Attributions</h3>
+        <strong>Libraries</strong>
+        <dl>
+          <dt>WebExtension polyfill</dt>
+          <dd>
+            Polyfill to enable this extension to run in multiple browsers:
+            <a href="https://github.com/mozilla/webextension-polyfill"
+              >https://github.com/mozilla/webextension-polyfill</a
+            >
+          </dd>
+        </dl>
 
-      <strong>Libraries</strong>
-      <dl>
-        <dt>WebExtension polyfill</dt>
-        <dd>
-          Polyfill to enable this extension to run in multiple browsers:
-          <a href="https://github.com/mozilla/webextension-polyfill"
-            >https://github.com/mozilla/webextension-polyfill</a
-          >
-        </dd>
-      </dl>
-
-      <strong>Icons and Graphics</strong><br />
-      This extensions icon is made up from two other vector icons
-      <dl>
-        <dt>Cloud Icon</dt>
-        <dd>
-          Icons made by
-          <a
-            href="https://www.flaticon.com/authors/nikita-golubev"
-            title="Nikita Golubev"
-            >Nikita Golubev</a
-          >
-          from
-          <a href="https://www.flaticon.com/" title="Flaticon"
-            >www.flaticon.com</a
-          >
-        </dd>
-        <dt>Magnifying Glass</dt>
-        <dd>
-          Icons made by
-          <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
-            >Freepik</a
-          >
-          from
-          <a href="https://www.flaticon.com/" title="Flaticon"
-            >www.flaticon.com</a
-          >
-        </dd>
-      </dl>
+        <strong>Icons and Graphics</strong><br />
+        This extensions icon is made up from two other vector icons
+        <dl>
+          <dt>Cloud Icon</dt>
+          <dd>
+            Icons made by
+            <a
+              href="https://www.flaticon.com/authors/nikita-golubev"
+              title="Nikita Golubev"
+              >Nikita Golubev</a
+            >
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon"
+              >www.flaticon.com</a
+            >
+          </dd>
+          <dt>Magnifying Glass</dt>
+          <dd>
+            Icons made by
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+              >Freepik</a
+            >
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon"
+              >www.flaticon.com</a
+            >
+          </dd>
+        </dl>
+      </small>
     </div>
+    <script type="application/javascript" src="/scripts/storage.js"></script>
+    <script type="application/javascript" src="index.js"></script>
   </body>
 </html>

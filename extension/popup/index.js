@@ -34,6 +34,7 @@ changeActiveRepo = e => {
   toggleSelectedClassName(tabItems, queryAttribute)
   if (queryAttribute != null) {
     targetQuery.value = queryAttribute
+    queryInput.focus()
   } else {
     console.error("query attribute has invalid or missing value")
   }
@@ -60,8 +61,38 @@ getLastQuery = async () => {
     })
 }
 
+const getTabElement = () => {
+  return document.getElementById("frf-tabs")
+}
+
+const buildPopupContent = storedValues => {
+  getSourcesFromStorage().then(s => {
+    let content = []
+    if (!("sources" in s)) {
+      content = defaultConfiguration()
+    } else {
+      content = s["sources"]
+    }
+
+    content.forEach(item => {
+      let tmp = document.createElement("div")
+      if (storedValues != null && storedValues.targetUrl === item.address) {
+        tmp.className = "tab-item selected"
+      } else {
+        tmp.className = "tab-item"
+      }
+      tmp.setAttribute("data-query", item.address)
+      let textNode = document.createTextNode(item.name)
+      tmp.appendChild(textNode)
+      tmp.addEventListener("click", changeActiveRepo, false)
+      getTabElement().appendChild(tmp)
+    })
+  })
+}
+
 init = async () => {
   const storedValues = await getLastQuery()
+  buildPopupContent(storedValues)
   if (storedValues == null) return
 
   const { targetUrl, queryParam } = storedValues
@@ -78,3 +109,8 @@ for (let i = 0; i < tabItems.length; i++) {
 document.addEventListener("DOMContentLoaded", init)
 
 document.getElementById("frf-search-form").addEventListener("submit", findRepo)
+document
+  .getElementById("frf-options-bar-image")
+  .addEventListener("click", () => {
+    browser.runtime.openOptionsPage()
+  })

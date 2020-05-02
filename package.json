@@ -27,5 +27,8 @@
     "mocha": "^7.1.1",
     "sinon-chrome": "^3.0.1",
     "web-ext": "^4.1.0"
+  },
+  "resolutions": {
+    "eslint": "^4.18.2"
   }
 }

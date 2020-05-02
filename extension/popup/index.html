@@ -12,27 +12,7 @@
   <body>
     <input type="hidden" name="query-target" id="query-target" value="" />
     <div id="frf-tabs">
-      <div
-        class="tab-item"
-        data-query="https://mvnrepository.com/search?q=<frfterm>"
-      >
-        Maven Central
-      </div>
-      <div class="tab-item" data-query="https://pypi.org/search/?q=<frfterm>">
-        PyPi
-      </div>
-      <div
-        class="tab-item"
-        data-query="https://www.npmjs.com/search?q=<frfterm>"
-      >
-        NPM JS
-      </div>
-      <div
-        class="tab-item"
-        data-query="https://rubygems.org/search?query=<frfterm>"
-      >
-        RubyGems
-      </div>
+      <!-- Populated during loading of popup -->
     </div>
     <div id="frf-search-form-wrapper">
       <form id="frf-search-form">
@@ -49,7 +29,11 @@
         </div>
       </form>
     </div>
+    <div id="frf-options-bar">
+      <image src="/raw/gear.svg" id="frf-options-bar-image" />
+    </div>
 
+    <script type="application/javascript" src="/scripts/storage.js"></script>
     <script type="application/javascript" src="index.js"></script>
   </body>
 </html>
